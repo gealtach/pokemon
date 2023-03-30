@@ -5,7 +5,7 @@ const NavBar = () => {
     return(
         <div className={style.container}>
             <Link to='/home'><button className={style.btn}>Home</button></Link>
-            <Link to='/form'><button className={style.btn}>Form</button></Link>
+            <Link to='/form'><button className={style.btn}>Create your Pokemon</button></Link>
             <Link to='/'><button className={style.btn}>Exit</button></Link>
         </div>
     )

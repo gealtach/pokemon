@@ -69,10 +69,8 @@ const createInDb = async (name, hp, speed, height, attack, weight, defense, type
     const newPokemon = { name, hp, speed, height, attack, weight, defense, image };
 
     const pokeCreated = await Pokemon.create(newPokemon);
-    console.log(pokeCreated, 'soy paso 1')
 
-    // const infoTotal = await pokeCreated.addTypes(types);
-    // console.log(infoTotal, 'soy paso 2')
+    const infoTotal = await pokeCreated.addType(types);
 
 }
 

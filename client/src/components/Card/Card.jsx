@@ -7,7 +7,7 @@ const Card = ({name, image, type, id}) => {
             <button className={style.container}>
                 <img src={image} alt='F'/>
                 <h3>{name}</h3>
-                <p>{type}</p>
+                <p>{type.map((e) => <span key={e}>{e + ' '}</span>)}</p>
             </button>
         </Link>
     )

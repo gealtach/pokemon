@@ -23,3 +23,7 @@
 .number:hover {
     background: #F0E68C;
 }
+
+.number:active {
+    background-color: #F0E68C;
+}

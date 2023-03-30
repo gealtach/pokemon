@@ -18,8 +18,12 @@ const Home = () => {
     const [pokePerPage, setPokePerPage] = useState(12);
     const indexLastPoke = currentPage * pokePerPage;
     const indexFirstPoke = indexLastPoke - pokePerPage;
-    console.log(allPokemons)
+    
+    console.log(orden, setPokePerPage);
+
     const currentPoke = allPokemons.slice(indexFirstPoke, indexLastPoke);
+
+
 
     const paginado = (pageNumber) =>{
         setCurrentPage(pageNumber);
@@ -60,7 +64,7 @@ const Home = () => {
             <select onChange={(e) => handlerTypeFilter(e)}>
                 <option value='all'>All Types</option>
                     {
-                       allTypes.map((type) => (<option key={type} value={type} >{type}</option>))
+                       allTypes.map((type) => (<option key={type.name} value={type.name} >{type.name}</option>))
                     }
             </select>
             <select onChange={(e) => handlerCreatorFilter(e)}>
